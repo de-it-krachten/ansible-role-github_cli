@@ -1,0 +1,22 @@
+---
+
+github_cli_api: https://api.github.com/repos/cli/cli
+github_cli_repo: https://github.com/cli/cli
+
+github_cli:
+  architecture:
+    x86: 386
+    x86_64: amd64
+  system:
+    Linux: linux
+    Darwin: MacOS
+    windows: windows
+
+github_cli_download: true
+github_cli_version: latest
+
+#github_cli_path: /usr/local/bin/gh
+github_cli_path: /usr/bin/gh
+github_cli_owner: root
+github_cli_group: root
+github_cli_mode: '0755'
