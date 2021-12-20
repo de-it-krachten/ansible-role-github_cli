@@ -1,5 +1,10 @@
 ---
 
+- name: Install all required packages
+  package:
+    name: rsync
+    state: present
+
 - name: Lookup alternative system & architecture
   set_fact:
     github_cli_system: "{{ github_cli['system'][ansible_system] }}"
