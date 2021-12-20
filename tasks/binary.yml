@@ -7,6 +7,7 @@
 
 - name: Get github_cli version installed
   shell: >
+    set -o pipefail
     {{ github_cli_path }} --version | awk '{print $3}' | sed "s/,$//"
   changed_when: no
   failed_when: no
