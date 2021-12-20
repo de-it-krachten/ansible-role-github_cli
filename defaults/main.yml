@@ -1,8 +1,12 @@
 ---
 
+# Github CLI - API
 github_cli_api: https://api.github.com/repos/cli/cli
+
+# Github CLI - repo
 github_cli_repo: https://github.com/cli/cli
 
+# Lookup table for architecture
 github_cli:
   architecture:
     x86: 386
@@ -12,10 +16,13 @@ github_cli:
     Darwin: MacOS
     windows: windows
 
+# Should the cli be downloaded
 github_cli_download: true
+
+# Version of the CLI to install
 github_cli_version: latest
 
-#github_cli_path: /usr/local/bin/gh
+# Location/ownership/permissions of the binary
 github_cli_path: /usr/bin/gh
 github_cli_owner: root
 github_cli_group: root
