@@ -1,5 +1,10 @@
 ---
 
+- name: Install all required packages
+  package:
+    name: rsync
+    state: present
+
 - name: Lookup alternative system & architecture
   set_fact:
     github_cli_system: "{{ github_cli['system'][ansible_system] }}"
@@ -7,6 +12,7 @@
 
 - name: Get github_cli version installed
   shell: >
+    set -o pipefail
     {{ github_cli_path }} --version | awk '{print $3}' | sed "s/,$//"
   changed_when: no
   failed_when: no
