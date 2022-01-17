@@ -5,7 +5,6 @@
 
 Installs the github cli on Linux systems
 
-
 Platforms
 --------------
 
@@ -13,6 +12,8 @@ Supported platforms
 
 - CentOS 7
 - CentOS 8
+- RockyLinux 8
+- AlmaLinux 8
 - Debian 10 (Buster)
 - Debian 11 (Bullseye)
 - Ubuntu 18.04 LTS
@@ -57,11 +58,11 @@ Example Playbook
 ----------------
 
 <pre><code>
-- name: Converge
+- name: sample playbook for role 'github_cli'
   hosts: all
-  vars: null
+  vars:
   tasks:
-    - name: Include role 'ansible-role-github_cli'
+    - name: Include role 'github_cli'
       include_role:
-        name: ansible-role-github_cli
+        name: github_cli
 </pre></code>
