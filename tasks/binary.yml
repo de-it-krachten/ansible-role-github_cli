@@ -2,7 +2,10 @@
 
 - name: Install all required packages
   package:
-    name: rsync
+    name:
+      - rsync
+      - gzip
+      - tar
     state: present
 
 - name: Lookup alternative system & architecture

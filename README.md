@@ -5,26 +5,31 @@
 
 Installs the github cli on Linux systems
 
-Platforms
---------------
+## Platforms
 
 Supported platforms
 
 - Red Hat Enterprise Linux 7<sup>1</sup>
 - Red Hat Enterprise Linux 8<sup>1</sup>
+- Red Hat Enterprise Linux 9<sup>1</sup>
 - CentOS 7
 - RockyLinux 8
-- AlmaLinux 8<sup>1</sup>
+- OracleLinux 8
+- AlmaLinux 8
+- AlmaLinux 9
 - Debian 10 (Buster)
 - Debian 11 (Bullseye)
 - Ubuntu 18.04 LTS
 - Ubuntu 20.04 LTS
+- Ubuntu 22.04 LTS
+- Fedora 35
+- Fedora 36
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
 
-Role Variables
---------------
+## Role Variables
+### defaults/main.yml
 <pre><code>
 # Github CLI - API
 github_cli_api: https://api.github.com/repos/cli/cli
@@ -55,10 +60,22 @@ github_cli_group: root
 github_cli_mode: '0755'
 </pre></code>
 
+### vars/main.yml
+<pre><code>
+github_cli:
+  architecture:
+    x86: 386
+    x86_64: amd64
+  system:  
+    Linux: linux
+    Darwin: MacOS
+    windows: windows
+</pre></code>
 
-Example Playbook
-----------------
 
+
+## Example Playbook
+### molecule/default/converge.yml
 <pre><code>
 - name: sample playbook for role 'github_cli'
   hosts: all
