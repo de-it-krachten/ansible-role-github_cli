@@ -1,3 +1,5 @@
+---
+
 generic:
   role_description: |
     Installs the github cli on Linux systems
