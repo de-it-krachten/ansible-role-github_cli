@@ -23,7 +23,7 @@
 
 - name: Set installed version as fact
   ansible.builtin.set_fact:
-     github_cli_version_installed: "{{ 'N/A' if github_cli_version_installed.stdout | length == 0 else github_cli_version_installed.stdout }}"
+    github_cli_version_installed: "{{ 'N/A' if github_cli_version_installed.stdout | length == 0 else github_cli_version_installed.stdout }}"
 
 - name: Get latest github_cli release info
   ansible.builtin.uri:
