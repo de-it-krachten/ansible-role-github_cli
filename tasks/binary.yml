@@ -1,7 +1,7 @@
 ---
 
 - name: Install all required packages
-  package:
+  ansible.builtin.package:
     name:
       - rsync
       - gzip
@@ -9,12 +9,12 @@
     state: present
 
 - name: Lookup alternative system & architecture
-  set_fact:
+  ansible.builtin.set_fact:
     github_cli_system: "{{ github_cli['system'][ansible_system] }}"
     github_cli_architecture: "{{ github_cli['architecture'][ansible_architecture] | default(ansible_architecture) }}"
 
 - name: Get github_cli version installed
-  shell: >
+  ansible.builtin.shell: >
     set -o pipefail
     {{ github_cli_path }} --version | awk '{print $3}' | sed "s/,$//"
   changed_when: no
@@ -22,61 +22,61 @@
   register: github_cli_version_installed
 
 - name: Set installed version as fact
-  set_fact:
-     github_cli_version_installed: "{{ 'N/A' if github_cli_version_installed.stdout|length == 0 else github_cli_version_installed.stdout }}"
+  ansible.builtin.set_fact:
+     github_cli_version_installed: "{{ 'N/A' if github_cli_version_installed.stdout | length == 0 else github_cli_version_installed.stdout }}"
 
 - name: Get latest github_cli release info
-  uri:
-    url: "{{ github_cli_api+'/releases/latest' }}"
+  ansible.builtin.uri:
+    url: "{{ github_cli_api + '/releases/latest' }}"
   check_mode: no
   register: github_cli_version_info
 
 - name: Get latest release tag
-  set_fact:
+  ansible.builtin.set_fact:
     github_cli_version_latest: "{{ github_cli_version_info.json.tag_name }}"
 
 - name: Replace 'latest' by the actual version
-  set_fact:
+  ansible.builtin.set_fact:
     github_cli_version: "{{ github_cli_version_latest }}"
   when: github_cli_version == 'latest'
 
 - name: Get all github_cli releases info
-  uri:
-    url: "{{ github_cli_api+'/releases?per_page=1000' }}"
+  ansible.builtin.uri:
+    url: "{{ github_cli_api + '/releases?per_page=1000' }}"
   check_mode: no
   register: github_cli_version_info
 
 - name: Get version information
-  set_fact:
+  ansible.builtin.set_fact:
     github_cli_version_info: "{{ github_cli_version_info.json | json_query(query) | first }}"
   vars:
     query: "[?tag_name=='{{ github_cli_version }}']"
 
 - name: Construct filename based on the system & architecture
-  set_fact:
+  ansible.builtin.set_fact:
     github_cli_file: "gh_{{ github_cli_version | regex_replace('^v') }}_{{ github_cli_system }}_{{ github_cli_architecture }}.tar.gz"
 
 - name: Show github_cli release
-  debug:
+  ansible.builtin.debug:
     msg:
       - "github_cli latest release    : {{ github_cli_version_latest }}"
       - "github_cli requested release : {{ github_cli_version }}"
       - "github_cli installed release : {{ github_cli_version_installed }}"
 
 - name: Get binary location
-  set_fact:
+  ansible.builtin.set_fact:
     github_cli_url: "{{ github_cli_version_info.assets | json_query(query) | first }}"
   vars:
     query: "[?name=='{{ github_cli_file }}'].browser_download_url"
 
 - name: Download & extract github cli
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ github_cli_url }}"
     dest: /tmp
     remote_src: yes
 
 - name: Copy files to /usr
-  synchronize:
+  ansible.posix.synchronize:
     src: /tmp/{{ github_cli_file | regex_replace('\.tar.gz') }}/
     dest: /usr
   delegate_to: "{{ inventory_hostname }}"

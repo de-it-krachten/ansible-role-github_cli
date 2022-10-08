@@ -1,3 +1,4 @@
 ---
 
-- include_tasks: binary.yml
+- name: Include binary.yml
+  ansible.builtin.include_tasks: binary.yml
