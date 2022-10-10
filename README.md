@@ -5,6 +5,16 @@
 
 Installs the github cli on Linux systems
 
+
+## Dependencies
+
+#### Roles
+None
+
+#### Collections
+- community.general
+- ansible.posix
+
 ## Platforms
 
 Supported platforms
@@ -61,13 +71,14 @@ github_cli_group: root
 github_cli_mode: '0755'
 </pre></code>
 
+
 ### vars/main.yml
 <pre><code>
 github_cli:
   architecture:
     x86: 386
     x86_64: amd64
-  system:  
+  system:
     Linux: linux
     Darwin: MacOS
     windows: windows
@@ -83,6 +94,6 @@ github_cli:
   become: "{{ molecule['converge']['become'] | default('yes') }}"
   tasks:
     - name: Include role 'github_cli'
-      include_role:
+      ansible.builtin.include_role:
         name: github_cli
 </pre></code>
