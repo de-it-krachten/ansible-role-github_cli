@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.2.0...v1.3.0) (2022-10-12)
+
+
+### Features
+
+* Move to FQCN ([6747772](https://github.com/de-it-krachten/ansible-role-github_cli/commit/6747772b2271d7852ae69eeebc542fa52f38613f))
+* Update CI to latest standards ([77b0a6a](https://github.com/de-it-krachten/ansible-role-github_cli/commit/77b0a6a08ccf0b9176c7769a1b081dfe7cdef1e0))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.1.0...v1.2.0) (2022-07-28)
 
 
