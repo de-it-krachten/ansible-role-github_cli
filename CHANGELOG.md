@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.3.0...v1.3.1) (2023-05-20)
+
+
+### Bug Fixes
+
+* Fix due to new version format ([124e855](https://github.com/de-it-krachten/ansible-role-github_cli/commit/124e85522db07a3f6685ec70f9fde8d52fc37dd9))
+
 # [1.3.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.2.0...v1.3.0) (2022-10-12)
 
 
