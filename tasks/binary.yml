@@ -14,16 +14,16 @@
     github_cli_architecture: "{{ github_cli['architecture'][ansible_architecture] | default(ansible_architecture) }}"
 
 - name: Get github_cli version installed
-  ansible.builtin.shell: >
+  ansible.builtin.shell: |
     set -o pipefail
-    {{ github_cli_path }} --version | awk '{print $3}' | sed "s/,$//"
+    {{ github_cli_path }} --version | awk '/gh version/ {print $3}'
   changed_when: no
   failed_when: no
   register: github_cli_version_installed
 
 - name: Set installed version as fact
   ansible.builtin.set_fact:
-    github_cli_version_installed: "{{ 'N/A' if github_cli_version_installed.stdout | length == 0 else github_cli_version_installed.stdout }}"
+    github_cli_version_installed: "{{ 'N/A' if github_cli_version_installed.stdout | length == 0 else 'v' + github_cli_version_installed.stdout }}"
 
 - name: Get latest github_cli release info
   ansible.builtin.uri:
@@ -74,6 +74,8 @@
     src: "{{ github_cli_url }}"
     dest: /tmp
     remote_src: yes
+  check_mode: false
+  changed_when: false
 
 - name: Copy files to /usr
   ansible.posix.synchronize:
