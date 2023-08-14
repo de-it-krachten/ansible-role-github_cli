@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.3.1...v1.4.0) (2023-08-14)
+
+
+### Features
+
+* Update supported platforms & CI ([b145fc1](https://github.com/de-it-krachten/ansible-role-github_cli/commit/b145fc1b139f465b2031716c5ea445d9895a3720))
+
 ## [1.3.1](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.3.0...v1.3.1) (2023-05-20)
 
 
