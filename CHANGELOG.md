@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.4.0...v1.5.0) (2024-06-03)
+
+
+### Features
+
+* Add support for Ubuntu 24.04 LTS + Fedora 40 ([a03c2d0](https://github.com/de-it-krachten/ansible-role-github_cli/commit/a03c2d050763b9b3b5afbe1a61bd3158ba46572f))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.3.1...v1.4.0) (2023-08-14)
 
 
