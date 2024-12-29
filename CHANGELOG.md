@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.5.0...v1.6.0) (2024-12-29)
+
+
+### Features
+
+* Update supported platforms & CI ([f20f7c3](https://github.com/de-it-krachten/ansible-role-github_cli/commit/f20f7c33eb10effe138c3609d3fb926f8a1c9899))
+
 # [1.5.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.4.0...v1.5.0) (2024-06-03)
 
 
