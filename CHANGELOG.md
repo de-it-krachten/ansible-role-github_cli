@@ -1,3 +1,14 @@
+# [1.7.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.6.0...v1.7.0) (2025-08-06)
+
+
+### Features
+
+* Add support for AlmaLinux 10 ([ece1675](https://github.com/de-it-krachten/ansible-role-github_cli/commit/ece16750d52b27a875650d55b740a122b6e572a8))
+* Add support for Debian 13 (Trixie) ([a8009cc](https://github.com/de-it-krachten/ansible-role-github_cli/commit/a8009cc73d1ea2c8d90440d92903bbe3652241d0))
+* Add support for OracleLinux 10 ([67e00c5](https://github.com/de-it-krachten/ansible-role-github_cli/commit/67e00c5111d29556301af788be0c9e1313125176))
+* Add support for Red Hat Enterprise Linux 10 ([bac9f9e](https://github.com/de-it-krachten/ansible-role-github_cli/commit/bac9f9e7b726affc2840459aad276014a2886c39))
+* Add support for RockyLinux 10 ([e9c3ece](https://github.com/de-it-krachten/ansible-role-github_cli/commit/e9c3ece39fdf88fc407fd9f6d6acb3b96a8159db))
+
 # [1.6.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.5.0...v1.6.0) (2024-12-29)
 
 
