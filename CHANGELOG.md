@@ -1,3 +1,14 @@
+# [1.8.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.7.0...v1.8.0) (2026-03-14)
+
+
+### Features
+
+* Added support for Fedora 43 ([0debb27](https://github.com/de-it-krachten/ansible-role-github_cli/commit/0debb27373c691018d8fe8056832ee5d5eb1ed9a))
+* Drop support for Fedora 41 ([007c162](https://github.com/de-it-krachten/ansible-role-github_cli/commit/007c16298db4c535cbcaff8658d12e7c0fde4826))
+* Drop support for openSUSE Leap 15 ([973432f](https://github.com/de-it-krachten/ansible-role-github_cli/commit/973432f437ff542c9c6b0261def1a19f420b7365))
+* Drop support for SUSE Linux Enterprise 15 ([72c1f8f](https://github.com/de-it-krachten/ansible-role-github_cli/commit/72c1f8f0962006af48d25ae2f48e119c7cd5c644))
+* Drop support for Ubuntu 20.04 LTS ([e61ead5](https://github.com/de-it-krachten/ansible-role-github_cli/commit/e61ead5f7cbeb467deb6cd12bd265c03cf63cbbe))
+
 # [1.7.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.6.0...v1.7.0) (2025-08-06)
 
 
