@@ -6,6 +6,7 @@
 Installs the github cli on Linux systems
 
 
+
 ## Dependencies
 
 #### Roles
@@ -33,6 +34,7 @@ Supported platforms
 - Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
 - Debian 13 (Trixie)
+- Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
 - Ubuntu 24.04 LTS
 - Fedora 42
@@ -72,6 +74,12 @@ github_cli_path: /usr/bin/gh
 github_cli_owner: root
 github_cli_group: root
 github_cli_mode: '0755'
+
+# package dependencies
+github_package_dependencies:
+  - rsync
+  - gzip
+  - tar
 </pre></code>
 
 

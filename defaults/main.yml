@@ -27,3 +27,9 @@ github_cli_path: /usr/bin/gh
 github_cli_owner: root
 github_cli_group: root
 github_cli_mode: '0755'
+
+# package dependencies
+github_package_dependencies:
+  - rsync
+  - gzip
+  - tar

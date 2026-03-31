@@ -21,6 +21,7 @@ galaxy_info:
         - trixie
     - name: Ubuntu
       versions:
+        - focal
         - jammy
     - name: Fedora
       versions:
