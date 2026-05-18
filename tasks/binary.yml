@@ -2,11 +2,9 @@
 
 - name: Install all required packages
   ansible.builtin.package:
-    name:
-      - rsync
-      - gzip
-      - tar
+    name: "{{ github_package_dependencies }}"
     state: present
+  when: github_package_dependencies | length > 0
 
 - name: Lookup alternative system & architecture
   ansible.builtin.set_fact:

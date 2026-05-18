@@ -3,4 +3,10 @@
 generic:
   role_description: |
     Installs the github cli on Linux systems
-    
+
+# Supported platforms
+platforms:
+  ubuntu2004:
+    supported: true
+    ci: true
+
