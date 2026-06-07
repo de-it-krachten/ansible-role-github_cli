@@ -8,8 +8,8 @@
 
 - name: Lookup alternative system & architecture
   ansible.builtin.set_fact:
-    github_cli_system: "{{ github_cli['system'][ansible_system] }}"
-    github_cli_architecture: "{{ github_cli['architecture'][ansible_architecture] | default(ansible_architecture) }}"
+    github_cli_system: "{{ github_cli['system'][ansible_facts.system] }}"
+    github_cli_architecture: "{{ github_cli['architecture'][ansible_facts.architecture] | default(ansible_facts.architecture) }}"
 
 - name: Get github_cli version installed
   ansible.builtin.shell: |
