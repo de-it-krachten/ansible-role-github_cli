@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.9.0...v1.10.0) (2026-07-26)
+
+
+### Features
+
+* Add support for ansible-core 2.20+ ([af238f4](https://github.com/de-it-krachten/ansible-role-github_cli/commit/af238f42d1a4fc17ae4ffa0b67e8bc4264ea44ab))
+
 # [1.9.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.8.0...v1.9.0) (2026-05-18)
 
 
