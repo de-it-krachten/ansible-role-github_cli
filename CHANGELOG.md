@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.10.0...v1.11.0) (2026-10-30)
+
+
+### Features
+
+* Drop support for Debian 11 (Bullseye) ([153b191](https://github.com/de-it-krachten/ansible-role-github_cli/commit/153b1917b42f0cf45716eab6d99f540a5147248d))
+
 # [1.10.0](https://github.com/de-it-krachten/ansible-role-github_cli/compare/v1.9.0...v1.10.0) (2026-07-26)
 
 
